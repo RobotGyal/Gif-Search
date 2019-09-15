@@ -8,7 +8,7 @@ app = Flask(__name__)
 def index():
     """Return homepage."""
     # TODO: Extract the query term from url using request.args.get()
-    query = request.args.get('search_input')
+    query = request.args.get('query')
 
     # TODO: Make 'params' dictionary containing:
     # a) the query term, 'q'
@@ -18,7 +18,7 @@ def index():
     params = {
         'q' : query,
         'key' : 'UZ3H7US8OGBS',
-        'limit' : 10
+        'limit' : '10'
     }
 
     # TODO: Make an API call to Tenor using the 'requests' library. For 
@@ -38,8 +38,12 @@ def index():
     # TODO: Render the 'index.html' template, passing the list of gifs as a
     # named parameter called 'gifs'
 
-    gifs =render_template('index.html', query = query, result_gif = result_gif, params = params)
+    
+    gifs = render_template('index.html', 
+        query = query, 
+        result_gif = result_gif)
 
     return gifs
+
 if __name__ == '__main__':
     app.run(debug=True)

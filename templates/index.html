@@ -13,26 +13,28 @@ Gif Search
 <h1>Welcome to Gif Search</h1>
 <h2>We're going to have some fun</h2>
 
-<body background="http://getwallpapers.com/wallpaper/full/9/5/c/248601.jpg">
-    <div class="topnav">
+    <!-- <div class="topnav">
       <a class="active" href="Naruto">Naruto</a>
       <a href="#One Piece">One Piece</a>
       <a href="#Dragon Ball">Dragon Ball</a>
-    </div>
+    </div> -->
 
 
 <!-- TODO: Make an HTML form containing a search box and a submit button to add
     the search term to the query string. The form should have a target of '/' to
     send us to the same route. -->
     <form class="Search" action = '/'>
-        <input type="text" placeholder="Search.." name="search">
-        <input type="submit" value="Submit">
+        <input type="text" placeholder="Search.." name="query">
+        <button type="submit">Submit</button>
     </form>
 <!-- TODO: Make a for loop to loop over GIFs passed in from the server -->
 
 <!-- TODO: For each gif, include the 'gif.html' template to display it -->
 
-</body>
+{% for gif in result_gif %}
+    {%include 'gif.html'%}
+{% endfor %}
+
 {% endblock %}
 
 <!-- background="http://getwallpapers.com/wallpaper/full/9/5/c/248601.jpg"
