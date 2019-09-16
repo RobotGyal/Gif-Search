@@ -5,13 +5,6 @@ h1 {
     font-family: sans-serif;
 }
 
-h2 {
-    text-transform: uppercase;
-    text-align: center;
-    color:red;
-    font-family: sans-serif;
-}
-
 body{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
