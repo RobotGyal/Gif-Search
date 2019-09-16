@@ -58,6 +58,7 @@ def trending():
 def random():
 
     params = {
+        'q':'random',
         'key' : 'UZ3H7US8OGBS',
         'limit' : '10'
     }
@@ -66,7 +67,7 @@ def random():
     result = requests.get('https://api.tenor.com/v1/random', params=params)
     random_gifs = json.loads(result.content)['results']
 
-    gifs = render_template('index.html', random_gifs=random_gifs)
+    gifs = render_template('index.html', random_gifs=random_gifs, params=params)
 
     return gifs
 

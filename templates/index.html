@@ -31,14 +31,26 @@ Gif Search
     </form>
 
     <!-- Form setup for Random Button -->
-    <form action = '/trending'>
-        <button type='submit'> See What's Trending</button>
+    <form action = '/random'>
+        <button type='submit'> See What's Random</button>
     </form>
 
 <!-- Jinja2 loop to displays all gifs generated -->
 {% for gif in result_gif %}
     {%include 'gif.html'%}
 {% endfor %}
+
+
+{% for gif in trending_gifs %}
+    {%include 'gif.html'%}
+{% endfor %}
+
+
+{% for gif in random_gifs %}
+    {%include 'gif.html'%}
+{% endfor %}
+
+
 
 {% endblock %}
 
