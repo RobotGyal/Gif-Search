@@ -12,11 +12,12 @@ h2 {
     font-family: sans-serif;
 }
 
-
 body{
-    display: block;
-    margin-left:auto;
-    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 25px;
+    grid-row-gap: 25px;
+    width:100%;
     height: 500px;
     width: 500px;
     background-image: url("https://i.pinimg.com/originals/ed/a9/ac/eda9ace5d464d66d08ee327089727d76.jpg");
