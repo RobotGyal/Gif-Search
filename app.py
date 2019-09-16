@@ -30,10 +30,12 @@ def index():
 
     #Render the 'index.html' template, passing the list of gifs as a
     # named parameter called 'gifs'
-    gifs = render_template('index.html', 
-        query = query, 
-        result_gif = result_gif)
-
+    if (len(result_gif) != 0):
+        gifs = render_template('index.html', 
+            query = query, 
+            result_gif = result_gif)
+    else:
+        print("No gifs found")
     return gifs
 
 #Function and Route to generate trending gifs
@@ -49,8 +51,10 @@ def trending():
     result = requests.get('https://api.tenor.com/v1/trending', params=params)
     trending_gifs = json.loads(result.content)['results']
 
-    gifs = render_template('index.html', trending_gifs=trending_gifs)    
-
+    if (len(trending_gifs) != 0):
+        gifs = render_template('index.html', trending_gifs=trending_gifs)    
+    else:
+        print("No gifs found")
     return gifs
 
 #Function and Route to generate random gifs
@@ -66,9 +70,11 @@ def random():
     #API call to Tenor
     result = requests.get('https://api.tenor.com/v1/random', params=params)
     random_gifs = json.loads(result.content)['results']
-
-    gifs = render_template('index.html', random_gifs=random_gifs, params=params)
-
+    
+    if (len(random_gifs) != 0):
+        gifs = render_template('index.html', random_gifs=random_gifs, params=params)
+    else:
+            print("No gifs found")
     return gifs
 
 if __name__ == '__main__':
