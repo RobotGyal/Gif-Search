@@ -1,4 +1,3 @@
-<!-- templates/index.html -->
 
 <!-- TODO: Extend 'base.html' and put content into a block 'body' to match -->
 {% extends 'base.html' %}
@@ -20,20 +19,44 @@ Gif Search
 <img src="http://www.hxchector.com/wp-content/uploads/2015/10/sword-art-online-ii-gifs21.gif" alt="Cute Wink">
 
 
+
+
 <!-- TODO: Make an HTML form containing a search box and a submit button to add
     the search term to the query string. The form should have a target of '/' to
     send us to the same route. -->
+
+    <!-- Form setup for Search Bar -->
     <form class="Search" action = '/'>
         <input type="text" placeholder="Search.." name="query">
         <button type="submit">Submit</button>
     </form>
-<!-- TODO: Make a for loop to loop over GIFs passed in from the server -->
 
-<!-- TODO: For each gif, include the 'gif.html' template to display it -->
+    <!-- Form setup for Trending Button -->
+    <form action = '/trending'>
+        <button type='submit'> See What's Trending</button>
+    </form>
 
+    <!-- Form setup for Random Button -->
+    <form action = '/random'>
+        <button type='submit'> See What's Random</button>
+    </form>
+
+<!-- Jinja2 loop to displays all gifs generated -->
 {% for gif in result_gif %}
     {%include 'gif.html'%}
 {% endfor %}
+
+
+{% for gif in trending_gifs %}
+    {%include 'gif.html'%}
+{% endfor %}
+
+
+{% for gif in random_gifs %}
+    {%include 'gif.html'%}
+{% endfor %}
+
+
 
 {% endblock %}
 
