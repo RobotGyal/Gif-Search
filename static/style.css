@@ -34,3 +34,14 @@ input[type=text]{
 input[type=text]:focus {
   width: 100%;
 }
+
+ button{
+  float: center;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: red;
+  font-size: 17px;
+  border: 10px solid orange;
+  cursor: pointer;
+}
