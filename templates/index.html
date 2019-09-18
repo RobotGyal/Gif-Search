@@ -2,15 +2,15 @@
 <!-- TODO: Extend 'base.html' and put content into a block 'body' to match -->
 {% extends 'base.html' %}
 
+<!-- Sets up title through Jinja -->
 {% block title %}
 Gif Search
 {% endblock %}
 
+<!-- Sets up body tag to connect to base.html through Jinja -->
 {% block body %}
-
 <h1>Welcome to the Anime Gif Search (✿>×◕)~★</h1>
 
-
 <img src="http://www.hxchector.com/wp-content/uploads/2015/10/sword-art-online-ii-gifs21.gif" alt="Cute Wink">
 <img src="http://www.hxchector.com/wp-content/uploads/2015/10/sword-art-online-ii-gifs21.gif" alt="Cute Wink">
 <img src="http://www.hxchector.com/wp-content/uploads/2015/10/sword-art-online-ii-gifs21.gif" alt="Cute Wink">
@@ -18,12 +18,6 @@ Gif Search
 <img src="http://www.hxchector.com/wp-content/uploads/2015/10/sword-art-online-ii-gifs21.gif" alt="Cute Wink">
 <img src="http://www.hxchector.com/wp-content/uploads/2015/10/sword-art-online-ii-gifs21.gif" alt="Cute Wink">
 
-
-
-
-<!-- TODO: Make an HTML form containing a search box and a submit button to add
-    the search term to the query string. The form should have a target of '/' to
-    send us to the same route. -->
 
     <!-- Form setup for Search Bar -->
     <form class="Search" action = '/'>
@@ -41,23 +35,20 @@ Gif Search
         <button type='submit'> See What's Random</button>
     </form>
 
-<!-- Jinja2 loop to displays all gifs generated -->
+<!-- Jinja2 loop to displays gifs generated -->
 {% for gif in result_gif %}
     {%include 'gif.html'%}
 {% endfor %}
 
-
+<!-- Jinja2 loop to displays TRENDING gifs generated -->
 {% for gif in trending_gifs %}
     {%include 'gif.html'%}
 {% endfor %}
 
-
+<!-- Jinja2 loop to display RANDOM gifs generated -->
 {% for gif in random_gifs %}
     {%include 'gif.html'%}
 {% endfor %}
 
-
-
+<!-- Ends body block -->
 {% endblock %}
-
-<!-- background="http://getwallpapers.com/wallpaper/full/9/5/c/248601.jpg"

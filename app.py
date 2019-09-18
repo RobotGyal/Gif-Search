@@ -1,8 +1,14 @@
 from flask import Flask, render_template, request
 import requests
 import json
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = Flask(__name__)
+
+api_key = os.getenv("API_KEY")
 
 
 #Function and Route to generate trending gifs
@@ -14,7 +20,7 @@ def index():
 
     params = {
         'q' : query,
-        'key' : 'UZ3H7US8OGBS',
+        'key' : api_key,
         'limit' : '10'
     }
 
