@@ -1,34 +1,45 @@
-# How to Use This Starter Code
+# GIF Search
 
-To create your own repository using this code:
+Use HTML, CSS, Flask, and Python to build a GIF Search engine using the Tenor API. 
 
-1. Clone the repository onto your computer using the `git clone` command
-1. Run `git remote remove origin` to disconnect the code from Make-School-Labs
-1. In GitHub.com, create your own repository. **IMPORTANT**: Do not add a README
-1. Run `git remote add origin git@github.com:YOUR_USERNAME/YOUR_REPO_NAME.git`, replacing YOUR_USERNAME with your username and YOUR_REPO_NAME with your repository name
-1. Now you should be able to add, commit, and push as normal!
+# Learning Outcomes
 
-# How to Run This Starter Code
+By completing this project, you should be able to…
+* Set up a development environment for building a FLASK-powered website
+* Use templates to quickly create layouts for your website
+* Build basic route logic that uses parameters
+* Integrate a simple API into your project
+* Style elements in your project beyond the default
 
-You may need to install `flask` and/or `requests`. To do so, run:
+# Installation
 
-```bash
-pip3 install flask
-pip3 install requests
+1. Clone repo to your local source
+2. In Terminal (or preferred Control Line), run: (make sure `python3` and `flask` are installed)
 ```
-
-To run, open the folder containing `app.py` in a Terminal instance, and run:
-
-```bash
-export FLASK_ENV=development
-flask run
+$ export FLASK_ENV=development
+$ flask run
 ```
+3. copy address ` http://127.0.0.1:5000/` into preffered Browser address bar
+4. Happy Searching!
+
+# Features
+
+1. Search bar for looking for all sort of combinations of Gifs!
+2. Button for displaying Trending Gifs!
+3. Button for displaying Random Gifs!
+4. Gifs arranged in grid!
+
+# Frameworks
+
+This project was built with
+* [Flask] (https://www.fullstackpython.com/flask.html)
+* [Jinja2] (https://www.fullstackpython.com/jinja2.html)
+* [Tenor] (https://tenor.com/gifapi)
 
 # Resources
 
-You may find the following resources helpful in your development process:
+**Rubric**
+https://docs.google.com/document/d/1u8zn_w9kQceK1y0f0F6QEWWgP8T7KRsQvQOIvlzyMi0/edit
 
-1. [Tenor API Documentation](https://tenor.com/gifapi/documentation) - useful for understanding which URL we want to visit in order to make an API request for GIFs
-1. [BEW 1.1 Lesson on Flask](https://make-school-courses.github.io/BEW-1.1-RESTful-and-Resourceful-MVC-Architecture/#/./Lessons/03-Intro-to-Flask/README)
-1. [BEW 1.1 Lesson on Templates](https://make-school-courses.github.io/BEW-1.1-RESTful-and-Resourceful-MVC-Architecture/#/./Lessons/04-Flask-Templating/README)
-1. [BEW 1.1 Lesson on APIs](https://make-school-courses.github.io/BEW-1.1-RESTful-and-Resourceful-MVC-Architecture/#/./Lessons/05-URLs-HTTP-REST-and-Reading-Errors/README)
+**Spec**
+https://docs.google.com/document/d/1symUDRsZ1i2xf8F2mwAGFJtLjbOXqCj0JyrIgTtFNT0/edit#heading=h.sqlq00fgoz06
