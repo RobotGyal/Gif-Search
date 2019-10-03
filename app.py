@@ -8,7 +8,7 @@ load_dotenv()
 
 app = Flask(__name__)
 
-api_key = os.getenv("API_KEY")
+TENOR_API_KEY = os.getenv("TENOR_API_KEY")
 
 
 #Function and Route to generate trending gifs
@@ -20,7 +20,7 @@ def index():
 
     params = {
         'q' : query,
-        'key' : api_key,
+        'key' : TENOR_API_KEY,
         'limit' : '10'
     }
 
